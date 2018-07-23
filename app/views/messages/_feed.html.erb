@@ -1,0 +1,17 @@
+<div class="column is-half">
+	<div class="box">
+		<article clas="media box">
+			<div class="media-content">
+				<%= render 'messages/form' %>
+			</div>
+		 </article>
+	</div>
+
+<% @messages.each do | message | %>
+<div class="box">
+	<p><%= message.subdate %></p><br>
+	<p><%= message.message %></p><br>
+</div>
+	
+<% end %>
+</div>
