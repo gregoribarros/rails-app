@@ -1,17 +1,30 @@
-<div class="column is-half">
+<div class="column">
 	<div class="box">
-		<article clas="media box">
+		<article class="media box" id="no_border_shadow">
 			<div class="media-content">
 				<%= render 'messages/form' %>
 			</div>
 		 </article>
 	</div>
+	<div class="box">
+		<% @messages.each do | message | %>
+		<div class="box">
+			<p class="message_subdate">
+			  <%= message.getMessageSubDate.to_date %>
+			  :
+			</p>
 
-<% @messages.each do | message | %>
-<div class="box">
-	<p><%= message.subdate %></p><br>
-	<p><%= message.message %></p><br>
-</div>
-	
-<% end %>
+			<p class="message_text">
+			  <%= message.message %>
+			</p>
+			<div class="link_button">
+				<p>
+					<%= link_to 'Permalink', message_path(message) %>
+				</p>
+			</div>
+
+			</div>
+			
+		<% end %>
+	</div>
 </div>

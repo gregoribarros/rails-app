@@ -13,4 +13,26 @@
  *= require_tree .
  *= require_self
  */
-@import "bulma"
+@import "bulma";
+
+.message_subdate {
+	float:left;
+	margin-right:10px;
+}
+
+#no_border_shadow {
+	box-shadow: unset;
+}
+
+.message_text {  
+	display: -webkit-box;
+ 	-webkit-line-clamp: 3;
+ 	-webkit-box-orient: vertical;  
+ 	overflow: hidden;
+ 	word-break: break-all;
+	
+}
+
+.link_button {
+	float:right;
+}
