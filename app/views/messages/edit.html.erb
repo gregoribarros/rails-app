@@ -1,15 +1,19 @@
 <section class="section">
-	<div class="container">
+  	<div class="container">
 	    <div class="column">
 	    	<div class="column">
-					<div class="box message_text">
-
-						<%= render 'form', message: @message %>
-						<%= link_to 'Show', @message %> |
-						<%= link_to 'Back', messages_path %>
-
-					</div>
+				<div class="box">
+					<article class="media box" id="no_border_shadow">
+						<div class="media-content message_text">
+							<%= render 'form', message: @message %>
+							<%= link_to 'Show', @message %> |
+							<%= link_to 'Back', messages_path %> |
+							<%= link_to 'Delete', @message, method: :delete,remote: true %>
+						</div>
+					 </article>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
+

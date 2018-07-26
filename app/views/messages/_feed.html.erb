@@ -2,7 +2,7 @@
 	<div class="box">
 		<article class="media box" id="no_border_shadow">
 			<div class="media-content">
-				<%= render 'messages/form' %>
+				<%= render 'form' %>
 			</div>
 		 </article>
 	</div>
@@ -13,15 +13,22 @@
 				<p class="message_subdate">
 				  <%= message.getMessageSubDate.to_date %>:
 				</p>
-
+				
 				<p class="message_text">
-				  <%= auto_link(message.message) %>
-				</p>
-				<p class="message_text">
-							<%= link_to 'Link', message_path(message) %> |
-							<%= link_to 'Edit', edit_message_path(message) %> 
-				</p>
 					
+					<span id="<%= message.id %>"">
+				  		<%= auto_link(message.message) %>
+				  	</span>
+				  	<script type="text/javascript">
+					acha("<%= message.id %>");
+
+					</script>
+				</p>
+				<p class="message_text">
+					<%= link_to 'Link', message_path(message) %> |
+					<%= link_to 'Edit', edit_message_path(message) %> |
+					<%= link_to 'Delete', message, method: :delete,remote: true %>
+				</p>
 			</div>
 		</div>
 		<% end %>

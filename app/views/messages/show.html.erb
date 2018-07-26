@@ -11,9 +11,11 @@
 					<p class="message_text">
 					  <%= auto_link(@message.message) %>
 					</p>
+					<p class="message_text">
 					<%= link_to 'Edit', edit_message_path(@message) %> |
-					<%= link_to 'Back', messages_path %>
-
+					<%= link_to 'Back', messages_path %> |
+					<%= link_to 'Delete', @message, method: :delete,remote: true %>
+					</p>
 				</div>
 			</div>
 		</div>
