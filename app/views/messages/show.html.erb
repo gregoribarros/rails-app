@@ -1,29 +1,23 @@
-<p id="notice"><%= notice %></p>
 <section class="section">
-  <div class="container">
-    <div class="columns">
-    	<div class="column">
-			<div class="box">
-				<p class="message_subdate">
-				  <%= @message.getMessageSubDate.to_date %>
-				  :
-				</p>
-
-				<p class="message_text">
-				  <%= @message.message %>
-				</p>
-				<div class="link_button">
-					<p>
-						<%= link_to 'Permalink', message_path(@message) %>
+	<div class="container">
+	    <div class="column">
+	    	<div class="column">
+				<div class="box">
+					<p class="message_subdate">
+					  <%= @message.getMessageSubDate.to_date %>
+					  :
 					</p>
-				</div>
-				<%= link_to 'Edit', edit_message_path(@message) %> |
-				<%= link_to 'Back', messages_path %>
 
+					<p class="message_text">
+					  <%= auto_link(@message.message) %>
+					</p>
+					<%= link_to 'Edit', edit_message_path(@message) %> |
+					<%= link_to 'Back', messages_path %>
+
+				</div>
 			</div>
 		</div>
 	</div>
-  </div>
 </section>
 
 

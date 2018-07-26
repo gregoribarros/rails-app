@@ -13,9 +13,39 @@
  *= require_tree .
  *= require_self
  */
-@import "bulma";
+.section{
+	padding:3rem 1.5rem
+}
+.media{
+	align-items:flex-start;
+	display:flex;
+	text-align:left
+}
+.media-content{
+	flex-basis:auto;
+	flex-grow:1;
+	flex-shrink:1;
+	text-align:left
+}
+
+.box{	
+	background-color:#fff;
+	border-radius:6px;
+	box-shadow:0 2px 3px rgba(10,10,10,.1),0 0 0 1px rgba(10,10,10,.1);
+	color:#4a4a4a;
+	display:block;
+	padding:1.25rem;
+	margin: 0;
+	border: 0;
+}
+.container{
+	margin:0 auto;
+	position:relative;
+}
+		
 
 .message_subdate {
+    font-family:Arial, Helvetica, sans-serif;
 	float:left;
 	margin-right:10px;
 }
@@ -23,16 +53,94 @@
 #no_border_shadow {
 	box-shadow: unset;
 }
+.column{
+	display:block;
+	flex-basis:0;
+	flex-grow:1;
+	flex-shrink:1;
+	padding:.5rem
+}
+.column.is-half{
+	flex:none;
+	width:50%
+}
 
 .message_text {  
-	display: -webkit-box;
+
+    font-family:Arial, Helvetica, sans-serif;
  	-webkit-line-clamp: 3;
  	-webkit-box-orient: vertical;  
  	overflow: hidden;
  	word-break: break-all;
+ 	min-height:30px;
 	
 }
 
 .link_button {
+	text-decoration: none;
 	float:right;
+	margin: 0;
+	border: 0;
+}
+
+a:link {
+	color: #209cee;
+	text-decoration: none;
+	
+
+}
+a:visited {
+	color: #209cee;
+	text-decoration: none;
+
+}
+
+a:hover {
+	color: #202020;
+	text-decoration: none;
+
+}
+
+.textarea{
+
+	align-items:center;
+	border:1px solid black;
+	border-radius:4px;
+	display:inline-flex;
+	font-size:1rem;
+	height:2.25em;
+	justify-content:flex-start;
+	line-height:1.5;
+	padding-bottom:calc(.375em - 1px);
+	padding-left:calc(.625em - 1px);
+	padding-right:calc(.625em - 1px);
+	padding-top:calc(.375em - 1px);
+	position:relative;
+	vertical-align:top;
+	min-height:100px;
+	width: 95%
+}
+.button.is-info{
+	background-color:#209cee;
+	border-color:transparent;
+	color:#fff;
+	margin: 20px;
+	padding: 20px;
+	font-size:1.2rem
+}
+.field{
+	margin-bottom:0
+}
+.control{
+	font-size:1rem;
+	position:relative;
+	text-align:left
+}
+.label{
+    font-family:Arial, Helvetica, sans-serif;
+	color:#363636;
+	display:block;
+	font-size:1.3rem;
+	font-weight:700;
+	margin: 10px
 }

@@ -8,23 +8,22 @@
 	</div>
 	<div class="box">
 		<% @messages.each do | message | %>
-		<div class="box">
-			<p class="message_subdate">
-			  <%= message.getMessageSubDate.to_date %>
-			  :
-			</p>
-
-			<p class="message_text">
-			  <%= message.message %>
-			</p>
-			<div class="link_button">
-				<p>
-					<%= link_to 'Permalink', message_path(message) %>
+		<div class="column">
+			<div class="box">
+				<p class="message_subdate">
+				  <%= message.getMessageSubDate.to_date %>:
 				</p>
-			</div>
 
+				<p class="message_text">
+				  <%= auto_link(message.message) %>
+				</p>
+				<p class="message_text">
+							<%= link_to 'Link', message_path(message) %> |
+							<%= link_to 'Edit', edit_message_path(message) %> 
+				</p>
+					
 			</div>
-			
+		</div>
 		<% end %>
 	</div>
 </div>

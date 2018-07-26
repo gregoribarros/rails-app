@@ -1,6 +1,15 @@
-<h1>Editing Message</h1>
+<section class="section">
+	<div class="container">
+	    <div class="column">
+	    	<div class="column">
+					<div class="box message_text">
 
-<%= render 'form', message: @message %>
+						<%= render 'form', message: @message %>
+						<%= link_to 'Show', @message %> |
+						<%= link_to 'Back', messages_path %>
 
-<%= link_to 'Show', @message %> |
-<%= link_to 'Back', messages_path %>
+					</div>
+			</div>
+		</div>
+	</div>
+</section>
