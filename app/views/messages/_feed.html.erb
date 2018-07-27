@@ -12,15 +12,14 @@
 			<div class="box">
 				<p class="message_subdate">
 				  <%= message.getMessageSubDate.to_date %>:
-				</p>
-				
+				</p>				
 				<p class="message_text">
 					
 					<span id="<%= message.id %>"">
 				  		<%= auto_link(message.message) %>
 				  	</span>
 				  	<script type="text/javascript">
-					acha("<%= message.id %>");
+					alteraMensagem("<%= message.id %>");
 
 					</script>
 				</p>
